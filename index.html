@@ -209,7 +209,6 @@ header{
   margin:0 auto;
   width:100%;
 }
-/* CRITICAL: prevents grid children from forcing the column wider than the container */
 .book-wrap > *{min-width:0}
 
 .panel{
@@ -317,71 +316,6 @@ select{
 .ticket-note{font-size:.7rem;color:rgba(250,247,243,.45);text-align:center;margin-top:11px;font-weight:300;line-height:1.5}
 .ticket.done{background:linear-gradient(150deg,#2F7D5B,#256349)}
 
-/* ============ DASHBOARD ============ */
-.dash{background:var(--sand);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin-bottom:30px}
-.stat{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:20px 22px;min-width:0}
-.stat .k{font-size:.7rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);font-weight:500;margin-bottom:8px}
-.stat .v{
-  font-family:'Fraunces',serif;font-size:2rem;font-weight:600;line-height:1;
-  font-variation-settings:"opsz" 72;
-}
-.stat .v.gold{color:var(--gold-2)}
-.dash-bar{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:24px}
-.dash-bar input[type=date]{
-  padding:10px 14px;border:1px solid var(--line);border-radius:10px;
-  background:var(--white);font-size:.86rem;outline:none;min-height:44px;
-  max-width:100%;
-}
-.dash-bar input[type=date]:focus{border-color:var(--gold)}
-.spacer{flex:1}
-.appt-list{display:flex;flex-direction:column;gap:24px}
-.day-group .day-head{
-  display:flex;align-items:baseline;gap:12px;margin-bottom:12px;
-  font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--muted);font-weight:500;flex-wrap:wrap;
-}
-.day-head .count{color:var(--gold-2)}
-.appt{
-  background:var(--white);border:1px solid var(--line);border-radius:14px;
-  padding:18px 22px;display:grid;grid-template-columns:84px 1fr auto;
-  gap:22px;align-items:center;transition:box-shadow .2s, border-color .2s;
-  min-width:0;
-}
-.appt > *{min-width:0}
-.appt:hover{box-shadow:var(--shadow);border-color:#DCD2C5}
-.appt.cancelled{opacity:.55}
-.appt.cancelled .appt-name{text-decoration:line-through}
-.appt-time{
-  font-family:'Fraunces',serif;font-size:1.35rem;font-weight:600;line-height:1.1;
-  font-variation-settings:"opsz" 60;
-}
-.appt-time small{
-  display:block;font-family:'Inter';font-size:.66rem;letter-spacing:.1em;
-  text-transform:uppercase;color:var(--muted);font-weight:400;margin-top:3px;
-}
-.appt-name{font-size:1rem;font-weight:500;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-.appt-meta{font-size:.83rem;color:var(--muted);font-weight:300;margin-top:3px;word-break:break-word}
-.appt-meta b{font-weight:500;color:var(--ink-2)}
-.pill{font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:100px;font-weight:500;white-space:nowrap}
-.pill.confirmed{background:#EDF3FB;color:#2C5C8F}
-.pill.completed{background:#E9F5EF;color:var(--green)}
-.pill.cancelled{background:#FBEDEC;color:var(--red)}
-.appt-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
-.act{
-  border:1px solid var(--line);background:var(--white);border-radius:9px;
-  padding:8px 14px;font-size:.77rem;cursor:pointer;transition:all .18s;white-space:nowrap;
-  min-height:40px;
-}
-.act:hover{border-color:var(--ink);background:var(--ink);color:var(--cream)}
-.act:active{border-color:var(--ink);background:var(--ink);color:var(--cream)}
-.act.danger:hover,.act.danger:active{border-color:var(--red);background:var(--red);color:#fff}
-.empty{
-  text-align:center;padding:60px 24px;color:var(--muted);font-weight:300;
-  background:var(--white);border:1px dashed var(--line);border-radius:16px;
-}
-.empty .serif{font-size:1.4rem;color:var(--ink-2);display:block;margin-bottom:8px;font-variation-settings:"opsz" 60}
-
 /* ============ FOOTER ============ */
 footer{background:var(--ink);color:rgba(250,247,243,.65);padding:68px 0 32px;font-weight:300}
 .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:44px;margin-bottom:48px}
@@ -427,12 +361,9 @@ footer a:hover{color:var(--gold)}
   /* ---------- HEADER ---------- */
   .nav{height:56px;gap:12px}
   .logo{font-size:1.18rem}
-  .nav .btn-sm{display:none}           /* free up space; Book link lives in the menu */
+  .nav .btn-sm{display:none}
   .menu-toggle{display:flex}
 
-  /* Mobile dropdown — absolutely positioned relative to the sticky header.
-     Using absolute (not fixed) so the header's backdrop-filter containing
-     block doesn't confuse its positioning. */
   .links{
     position:absolute;
     top:100%;left:0;right:0;
@@ -499,7 +430,6 @@ footer a:hover{color:var(--gold)}
   .field{margin-bottom:14px}
   .field-row{grid-template-columns:1fr;gap:14px}
 
-  /* 16px inputs prevent iOS auto-zoom on focus */
   .field input,.field select,.field textarea{
     font-size:16px;
     padding:12px 14px;
@@ -511,7 +441,6 @@ footer a:hover{color:var(--gold)}
 
   .step-label{font-size:.68rem;margin:18px 0 10px}
 
-  /* Date strip — horizontal scroll contained inside the panel (no bleed) */
   .date-strip{
     flex-wrap:nowrap;
     overflow-x:auto;
@@ -533,71 +462,12 @@ footer a:hover{color:var(--gold)}
   }
   .date-chip .dnum{font-size:1.1rem}
 
-  /* Slots — 4 across, all tap-friendly */
   .slots{grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
   .slot{
     font-size:15px;
     padding:11px 2px;
     min-height:46px;
     border-radius:9px;
-  }
-
-  /* ---------- DASHBOARD ---------- */
-  .stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:22px}
-  .stat{padding:16px 18px;border-radius:12px}
-  .stat .k{font-size:.64rem;margin-bottom:6px}
-  .stat .v{font-size:1.7rem}
-
-  .dash-bar{
-    display:grid;
-    grid-template-columns:minmax(0,1fr) auto;
-    gap:8px;
-    margin-bottom:18px;
-  }
-  .dash-bar input[type=date]{
-    grid-column:1;
-    font-size:16px;
-    padding:10px 12px;
-    min-height:44px;
-    width:100%;
-    min-width:0;
-  }
-  .dash-bar #clearFilter{grid-column:2;min-height:44px;padding:10px 14px;font-size:.78rem}
-  .dash-bar .spacer{display:none}
-  .dash-bar #sampleBtn{grid-column:1;min-height:44px;padding:10px 14px;font-size:.78rem}
-  .dash-bar #clearAllBtn{grid-column:2;min-height:44px;padding:10px 14px;font-size:.78rem}
-
-  .appt-list{gap:16px}
-  .day-head{font-size:.68rem;gap:8px}
-  .appt{
-    grid-template-columns:1fr;
-    padding:16px;
-    gap:12px;
-    border-radius:12px;
-  }
-  .appt-time{
-    display:flex;align-items:baseline;gap:10px;
-    font-size:1.2rem;
-    padding-bottom:10px;
-    border-bottom:1px solid var(--line);
-  }
-  .appt-time small{margin-top:0;font-size:.62rem}
-  .appt-name{font-size:.96rem}
-  .appt-meta{font-size:.78rem;line-height:1.5}
-
-  /* Actions: as many 82px columns as fit, wrapping naturally */
-  .appt-actions{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(82px,1fr));
-    gap:6px;
-    width:100%;
-  }
-  .act{
-    padding:11px 8px;
-    font-size:.78rem;
-    min-height:44px;
-    min-width:0;
-    text-align:center;
   }
 
   /* ---------- FOOTER ---------- */
@@ -632,11 +502,6 @@ footer a:hover{color:var(--gold)}
   .container{padding:0 14px}
   .hero h1{font-size:2rem}
   .slots{grid-template-columns:repeat(3,minmax(0,1fr))}
-  .stats{grid-template-columns:1fr}
-  .dash-bar{grid-template-columns:1fr}
-  .dash-bar #clearFilter,
-  .dash-bar #sampleBtn,
-  .dash-bar #clearAllBtn{grid-column:1}
 }
 
 /* ============ REDUCED MOTION ============ */
@@ -658,7 +523,6 @@ footer a:hover{color:var(--gold)}
     <nav class="links" id="mobileNav" aria-label="Main navigation">
       <a href="#services">Services</a>
       <a href="#book">Book</a>
-      <a href="#dashboard">Staff Dashboard</a>
     </nav>
     <a href="#book" class="btn btn-sm">Book now</a>
     <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileNav">
@@ -778,29 +642,6 @@ footer a:hover{color:var(--gold)}
   </div>
 </section>
 
-<!-- ================= DASHBOARD ================= -->
-<section class="sec dash" id="dashboard">
-  <div class="container">
-    <div class="sec-head">
-      <p class="eyebrow">Staff Only</p>
-      <h2>Appointment dashboard</h2>
-      <p>Everything booked through the site lands here. Mark visits complete, cancel, or clear them out.</p>
-    </div>
-
-    <div class="stats" id="stats"></div>
-
-    <div class="dash-bar">
-      <input type="date" id="filterDate" aria-label="Filter by date">
-      <button class="btn btn-ghost btn-sm" id="clearFilter">Show all upcoming</button>
-      <div class="spacer"></div>
-      <button class="btn btn-ghost btn-sm" id="sampleBtn">Load sample data</button>
-      <button class="btn btn-ghost btn-sm" id="clearAllBtn">Clear all</button>
-    </div>
-
-    <div class="appt-list" id="apptList"></div>
-  </div>
-</section>
-
 <!-- ================= FOOTER ================= -->
 <footer>
   <div class="container">
@@ -858,6 +699,7 @@ const STYLISTS = [
   { id:'sofia',  name:'Sofia Alvarez',  role:'Stylist' }
 ];
 
+/* 0 = Sunday. Values are [openMinute, closeMinute]. null = closed. */
 const HOURS = {
   0: null,
   1: [540, 1080],
@@ -891,20 +733,8 @@ function fmtDuration(min){
   const h = Math.floor(min/60), m = min % 60;
   return m ? `${h} hr ${m} min` : `${h} hr${h>1?'s':''}`;
 }
-function fmtDateLong(dateStr){
-  return parseDate(dateStr).toLocaleDateString('en-US', { weekday:'long', month:'long', day:'numeric' });
-}
 function fmtDateShort(dateStr){
   return parseDate(dateStr).toLocaleDateString('en-US', { weekday:'short', month:'short', day:'numeric' });
-}
-function relDay(dateStr){
-  const today = new Date(); today.setHours(0,0,0,0);
-  const d = parseDate(dateStr);
-  const diff = Math.round((d - today) / 86400000);
-  if (diff === 0) return 'Today';
-  if (diff === 1) return 'Tomorrow';
-  if (diff === -1) return 'Yesterday';
-  return fmtDateShort(dateStr);
 }
 
 /* =========================================================
@@ -1185,7 +1015,6 @@ function confirmBooking(){
 
   $('#newBookingBtn').addEventListener('click', resetBooking);
   toast('Appointment confirmed — ' + ref, 'ok');
-  renderDashboard();
 }
 
 function resetBooking(){
@@ -1213,108 +1042,6 @@ function resetBooking(){
 }
 
 /* =========================================================
-   DASHBOARD
-   ========================================================= */
-function renderStats(){
-  const all = getAppointments();
-  const todayStr = toDateStr(new Date());
-  const today = all.filter(a => a.date === todayStr && a.status !== 'cancelled');
-
-  const upcoming = all
-    .filter(a => a.status === 'confirmed' && a.date >= todayStr)
-    .sort((x,y) => (x.date + x.time).localeCompare(y.date + y.time));
-
-  const revenue = all
-    .filter(a => a.status !== 'cancelled' && a.date >= todayStr)
-    .reduce((sum, a) => sum + a.price, 0);
-
-  const completed = all.filter(a => a.status === 'completed').length;
-
-  $('#stats').innerHTML = `
-    <div class="stat"><div class="k">Today</div><div class="v">${today.length}</div></div>
-    <div class="stat"><div class="k">Upcoming</div><div class="v">${upcoming.length}</div></div>
-    <div class="stat"><div class="k">Booked value</div><div class="v gold">${money(revenue)}</div></div>
-    <div class="stat"><div class="k">Completed</div><div class="v">${completed}</div></div>
-  `;
-}
-
-function renderDashboard(){
-  renderStats();
-
-  const list = $('#apptList');
-  const todayStr = toDateStr(new Date());
-  const filter = $('#filterDate').value;
-
-  let items = getAppointments();
-
-  if (filter){
-    items = items.filter(a => a.date === filter);
-  } else {
-    items = items.filter(a => a.date >= todayStr);
-  }
-
-  items.sort((a,b) => (a.date + a.time).localeCompare(b.date + b.time));
-
-  if (!items.length){
-    list.innerHTML = `
-      <div class="empty">
-        <span class="serif">Nothing in the diary</span>
-        ${filter ? 'No appointments on that date.' : 'No upcoming appointments yet — bookings made above will appear here.'}
-      </div>`;
-    return;
-  }
-
-  const groups = items.reduce((acc, a) => {
-    (acc[a.date] = acc[a.date] || []).push(a);
-    return acc;
-  }, {});
-
-  list.innerHTML = Object.keys(groups).sort().map(date => `
-    <div class="day-group">
-      <div class="day-head">
-        <span>${relDay(date)} · ${fmtDateLong(date)}</span>
-        <span class="count">${groups[date].length} appt${groups[date].length > 1 ? 's' : ''}</span>
-      </div>
-      ${groups[date].map(apptCard).join('')}
-    </div>
-  `).join('');
-}
-
-function apptCard(a){
-  const endTime = toTime(toMin(a.time) + a.duration);
-  return `
-    <div class="appt ${a.status}" data-id="${a.id}">
-      <div class="appt-time">${a.time}<small>→ ${endTime}</small></div>
-      <div>
-        <div class="appt-name">
-          ${escapeHtml(a.name)}
-          <span class="pill ${a.status}">${a.status}</span>
-        </div>
-        <div class="appt-meta">
-          <b>${escapeHtml(a.serviceName)}</b> · ${a.stylistName} · ${fmtDuration(a.duration)} · ${money(a.price)}
-        </div>
-        <div class="appt-meta">
-          ${escapeHtml(a.phone)}${a.email ? ' · ' + escapeHtml(a.email) : ''}
-          ${a.notes ? ' · <i>' + escapeHtml(a.notes) + '</i>' : ''}
-        </div>
-        <div class="appt-meta" style="font-size:.74rem;opacity:.7">Ref ${a.ref}</div>
-      </div>
-      <div class="appt-actions">
-        ${a.status === 'confirmed' ? `<button class="act" data-act="complete">Complete</button>` : ''}
-        ${a.status === 'confirmed' ? `<button class="act" data-act="cancel">Cancel</button>` : ''}
-        <button class="act danger" data-act="delete">Delete</button>
-      </div>
-    </div>
-  `;
-}
-
-function escapeHtml(str){
-  return String(str).replace(/[&<>"']/g, c => ({
-    '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
-  }[c]));
-}
-
-/* =========================================================
    TOAST
    ========================================================= */
 let toastTimer;
@@ -1324,44 +1051,6 @@ function toast(msg, type = ''){
   el.className = 'show ' + type;
   clearTimeout(toastTimer);
   toastTimer = setTimeout(() => { el.className = ''; }, 3600);
-}
-
-/* =========================================================
-   SAMPLE DATA
-   ========================================================= */
-function loadSampleData(){
-  const today = new Date(); today.setHours(0,0,0,0);
-  const d = offset => { const x = new Date(today); x.setDate(x.getDate() + offset); return toDateStr(x); };
-
-  const samples = [
-    { name:'Priya Raman',   phone:'(555) 214-8890', email:'priya@example.com', serviceId:'balay',    stylistId:'marcus', date:d(0), time:'10:00', notes:'Wants a warmer tone this time.' },
-    { name:'Tom Whitfield', phone:'(555) 773-2210', email:'',                  serviceId:'mcut',     stylistId:'ava',    date:d(0), time:'13:30', notes:'' },
-    { name:'Elena Marsh',   phone:'(555) 908-4412', email:'elena@example.com', serviceId:'color',    stylistId:'marcus', date:d(0), time:'15:00', notes:'Root touch-up only.' },
-    { name:'Danielle Ortiz',phone:'(555) 330-1122', email:'',                  serviceId:'blow',     stylistId:'sofia',  date:d(1), time:'09:30', notes:'Event in the evening.' },
-    { name:'Grace Kim',     phone:'(555) 662-7781', email:'grace@example.com', serviceId:'wcut',     stylistId:'ava',    date:d(1), time:'11:00', notes:'' },
-    { name:'Nadia Bell',    phone:'(555) 445-9903', email:'',                  serviceId:'keratin',  stylistId:'sofia',  date:d(2), time:'10:00', notes:'First time — has fine hair.' },
-    { name:'Owen Blake',    phone:'(555) 118-2276', email:'owen@example.com',  serviceId:'deep',     stylistId:'ava',    date:d(3), time:'14:00', notes:'' },
-  ];
-
-  const existing = getAppointments();
-  const added = samples.map((s, i) => {
-    const svc = serviceById(s.serviceId);
-    return {
-      id: 'sample' + Date.now() + i,
-      ref: 'ML-' + Math.random().toString(36).slice(2,6).toUpperCase(),
-      name: s.name, phone: s.phone, email: s.email, notes: s.notes,
-      serviceId: svc.id, serviceName: svc.name, duration: svc.dur, price: svc.price,
-      stylistId: s.stylistId, stylistName: stylistById(s.stylistId).name,
-      date: s.date, time: s.time,
-      status: 'confirmed',
-      createdAt: new Date().toISOString(),
-    };
-  });
-
-  saveAppointments(existing.concat(added));
-  renderDashboard();
-  renderSlots();
-  toast('Sample appointments loaded.', 'ok');
 }
 
 /* =========================================================
@@ -1386,24 +1075,20 @@ function wireMobileMenu(){
     toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
   });
 
-  // Close when a nav link is tapped (so the anchor jump feels clean)
   nav.querySelectorAll('a').forEach(a => {
     a.addEventListener('click', closeMenu);
   });
 
-  // Close when tapping anywhere outside the nav or toggle
   document.addEventListener('click', e => {
     if (!nav.classList.contains('open')) return;
     if (nav.contains(e.target) || toggle.contains(e.target)) return;
     closeMenu();
   });
 
-  // Close on Escape
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') closeMenu();
   });
 
-  // Reset when crossing back to desktop
   window.addEventListener('resize', () => {
     if (window.innerWidth > 720) closeMenu();
   });
@@ -1456,48 +1141,6 @@ function wireEvents(){
   });
 
   $('#confirmBtn').addEventListener('click', confirmBooking);
-
-  $('#apptList').addEventListener('click', e => {
-    const btn = e.target.closest('[data-act]');
-    if (!btn) return;
-    const id = btn.closest('.appt').dataset.id;
-    const act = btn.dataset.act;
-    const all = getAppointments();
-    const idx = all.findIndex(a => a.id === id);
-    if (idx === -1) return;
-
-    if (act === 'complete'){
-      all[idx].status = 'completed';
-      saveAppointments(all);
-      toast('Marked as completed.', 'ok');
-    } else if (act === 'cancel'){
-      if (!confirm(`Cancel ${all[idx].name}'s appointment?`)) return;
-      all[idx].status = 'cancelled';
-      saveAppointments(all);
-      toast('Appointment cancelled.', '');
-    } else if (act === 'delete'){
-      if (!confirm(`Permanently delete ${all[idx].name}'s appointment?`)) return;
-      all.splice(idx, 1);
-      saveAppointments(all);
-      toast('Appointment deleted.', '');
-    }
-    renderDashboard();
-    renderSlots();
-  });
-
-  $('#filterDate').addEventListener('change', renderDashboard);
-  $('#clearFilter').addEventListener('click', () => {
-    $('#filterDate').value = '';
-    renderDashboard();
-  });
-  $('#sampleBtn').addEventListener('click', loadSampleData);
-  $('#clearAllBtn').addEventListener('click', () => {
-    if (!confirm('Delete every appointment? This cannot be undone.')) return;
-    saveAppointments([]);
-    renderDashboard();
-    renderSlots();
-    toast('All appointments cleared.', '');
-  });
 }
 
 /* =========================================================
@@ -1510,7 +1153,6 @@ function init(){
   renderDateStrip();
   renderSlots();
   renderSummary();
-  renderDashboard();
   wireEvents();
   wireMobileMenu();
 }
