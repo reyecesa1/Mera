@@ -4,7 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#FAF7F3">
-<title>Maison Lumière — Hair Studio</title>
+<title>Elite Styles By MERA — Hair Salon in Spring, TX</title>
+<meta name="description" content="Elite Styles By MERA — expert hair color, cuts, keratin treatments & facial waxing in Spring, TX. Women-owned. Book your appointment today.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400..600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -26,54 +27,35 @@
   --shadow-lg:0 24px 60px -28px rgba(27,24,21,.32);
 }
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
-html{
-  scroll-behavior:smooth;
-  -webkit-text-size-adjust:100%;
-  overflow-x:clip;
-}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:clip}
 body{
   font-family:'Inter',system-ui,-apple-system,sans-serif;
-  background:var(--cream);
-  color:var(--ink);
-  line-height:1.65;
-  font-weight:400;
-  font-size:15.5px;
-  -webkit-font-smoothing:antialiased;
-  overflow-x:clip;
-  max-width:100vw;
+  background:var(--cream);color:var(--ink);
+  line-height:1.65;font-weight:400;font-size:15.5px;
+  -webkit-font-smoothing:antialiased;overflow-x:clip;max-width:100vw;
 }
 h1,h2,h3,.serif{
   font-family:'Fraunces',Georgia,serif;
-  font-weight:500;
-  line-height:1.1;
-  letter-spacing:-.018em;
-  font-optical-sizing:auto;
+  font-weight:500;line-height:1.1;letter-spacing:-.018em;font-optical-sizing:auto;
 }
 a{color:inherit;text-decoration:none}
 button,input,select,textarea{font:inherit;color:inherit}
 img,svg,video{max-width:100%;height:auto}
-.container{
-  max-width:1120px;
-  margin:0 auto;
-  padding:0 clamp(16px, 4vw, 40px);
-}
+.container{max-width:1120px;margin:0 auto;padding:0 clamp(16px,4vw,40px)}
 section{scroll-margin-top:88px}
 
 /* ============ BUTTONS ============ */
 .btn{
   display:inline-flex;align-items:center;justify-content:center;gap:8px;
   padding:13px 26px;border-radius:100px;border:1px solid var(--ink);
-  background:var(--ink);color:var(--cream);
-  font-size:.88rem;font-weight:500;letter-spacing:.005em;
-  cursor:pointer;transition:all .22s ease;white-space:nowrap;
-  min-height:44px;
+  background:var(--ink);color:var(--cream);font-size:.88rem;font-weight:500;
+  cursor:pointer;transition:all .22s ease;white-space:nowrap;min-height:44px;
 }
 .btn:hover{background:var(--gold-2);border-color:var(--gold-2);color:#fff;transform:translateY(-1px)}
 .btn:active{transform:translateY(0);background:var(--gold-2);border-color:var(--gold-2);color:#fff}
 .btn:disabled{opacity:.4;cursor:not-allowed;transform:none;background:var(--ink);border-color:var(--ink)}
 .btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
 .btn-ghost:hover{background:transparent;border-color:var(--ink);color:var(--ink)}
-.btn-ghost:active{background:transparent;color:var(--ink);border-color:var(--ink)}
 .btn-sm{padding:9px 18px;font-size:.8rem;min-height:40px}
 
 /* ============ HEADER ============ */
@@ -83,16 +65,8 @@ header{
   backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
   border-bottom:1px solid var(--line);
 }
-.nav{
-  display:flex;align-items:center;justify-content:space-between;
-  height:72px;gap:24px;position:relative;
-}
-.logo{
-  font-family:'Fraunces',serif;
-  font-size:1.35rem;font-weight:600;letter-spacing:-.01em;
-  font-variation-settings:"opsz" 40;
-  white-space:nowrap;
-}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:24px;position:relative}
+.logo{font-family:'Fraunces',serif;font-size:1.35rem;font-weight:600;letter-spacing:-.01em;font-variation-settings:"opsz" 40;white-space:nowrap}
 .logo span{color:var(--gold);font-style:italic;font-weight:500}
 .links{display:flex;gap:32px;font-size:.86rem;letter-spacing:.005em}
 .links a{color:var(--ink-2);position:relative;padding:4px 0;transition:color .2s;font-weight:400}
@@ -100,99 +74,67 @@ header{
 .links a:hover{color:var(--gold-2)}
 .links a:hover::after{width:100%}
 .menu-toggle{
-  display:none;
-  width:44px;height:44px;
-  border:1px solid var(--line);background:var(--white);
-  border-radius:11px;cursor:pointer;
-  flex-direction:column;align-items:center;justify-content:center;
-  gap:5px;padding:0;
-  transition:border-color .2s, background .2s;
-  flex:0 0 auto;
+  display:none;width:44px;height:44px;border:1px solid var(--line);background:var(--white);
+  border-radius:11px;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;
+  gap:5px;padding:0;transition:border-color .2s,background .2s;flex:0 0 auto;
 }
 .menu-toggle:active{border-color:var(--gold);background:var(--sand)}
-.menu-toggle span{
-  display:block;width:18px;height:2px;background:var(--ink);
-  transition:all .28s cubic-bezier(.3,.9,.3,1.2);border-radius:2px;
-}
+.menu-toggle span{display:block;width:18px;height:2px;background:var(--ink);transition:all .28s cubic-bezier(.3,.9,.3,1.2);border-radius:2px}
 .menu-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .menu-toggle.open span:nth-child(2){opacity:0;transform:scaleX(0)}
 .menu-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 
+/* ============ NOTICE BAR ============ */
+.notice{
+  background:var(--ink);color:var(--cream);text-align:center;
+  padding:11px 20px;font-size:.78rem;letter-spacing:.03em;font-weight:400;
+}
+.notice strong{color:var(--gold);font-weight:500}
+
 /* ============ HERO ============ */
 .hero{
-  position:relative;overflow:hidden;
-  padding:104px 0 116px;
+  position:relative;overflow:hidden;padding:104px 0 116px;
   background:
     radial-gradient(900px 520px at 80% 12%, rgba(176,137,86,.20), transparent 62%),
     radial-gradient(680px 460px at 6% 88%, rgba(176,137,86,.10), transparent 60%),
     linear-gradient(158deg,#FCF9F5 0%,#F2EAE0 100%);
   border-bottom:1px solid var(--line);
 }
-.hero::before{
-  content:'';position:absolute;right:-160px;top:-140px;
-  width:620px;height:620px;border-radius:50%;
-  border:1px solid rgba(176,137,86,.28);
-  pointer-events:none;
-}
-.hero::after{
-  content:'';position:absolute;right:-60px;top:-40px;
-  width:420px;height:420px;border-radius:50%;
-  border:1px solid rgba(176,137,86,.16);
-  pointer-events:none;
-}
+.hero::before{content:'';position:absolute;right:-160px;top:-140px;width:620px;height:620px;border-radius:50%;border:1px solid rgba(176,137,86,.28);pointer-events:none}
+.hero::after{content:'';position:absolute;right:-60px;top:-40px;width:420px;height:420px;border-radius:50%;border:1px solid rgba(176,137,86,.16);pointer-events:none}
 .hero-inner{position:relative;z-index:1;max-width:720px}
-.eyebrow{
-  font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;
-  color:var(--gold-2);font-weight:500;margin-bottom:20px;
-  display:flex;align-items:center;gap:12px;
-}
+.eyebrow{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-2);font-weight:500;margin-bottom:20px;display:flex;align-items:center;gap:12px}
 .eyebrow::before{content:'';width:34px;height:1px;background:var(--gold);flex:0 0 auto}
-.hero h1{
-  font-size:clamp(2.6rem,5.6vw,4.4rem);
-  margin-bottom:22px;
-  font-variation-settings:"opsz" 144;
-}
+.hero h1{font-size:clamp(2.6rem,5.6vw,4.4rem);margin-bottom:22px;font-variation-settings:"opsz" 144}
 .hero h1 em{font-style:italic;color:var(--gold-2);font-weight:400}
-.lede{font-size:1.02rem;color:var(--muted);max-width:500px;font-weight:300;margin-bottom:36px;line-height:1.7}
+.lede{font-size:1.02rem;color:var(--muted);max-width:520px;font-weight:300;margin-bottom:36px;line-height:1.7}
 .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:52px}
 .hero-facts{display:flex;gap:44px;flex-wrap:wrap;list-style:none;padding-top:30px;border-top:1px solid var(--line)}
 .hero-facts li{font-size:.8rem;color:var(--muted);letter-spacing:.005em}
-.hero-facts strong{
-  display:block;
-  font-family:'Fraunces',serif;
-  font-size:1.6rem;font-weight:600;color:var(--ink);line-height:1.2;
-  font-variation-settings:"opsz" 72;
-}
+.hero-facts strong{display:block;font-family:'Fraunces',serif;font-size:1.6rem;font-weight:600;color:var(--ink);line-height:1.2;font-variation-settings:"opsz" 72}
 
 /* ============ SECTION HEADS ============ */
 .sec{padding:92px 0}
-.sec-head{max-width:580px;margin-bottom:52px}
+.sec-head{max-width:620px;margin-bottom:52px}
 .sec-head .eyebrow{margin-bottom:14px}
-.sec-head h2{
-  font-size:clamp(1.85rem,3.6vw,2.6rem);
-  margin-bottom:14px;
-  font-variation-settings:"opsz" 96;
-}
+.sec-head h2{font-size:clamp(1.85rem,3.6vw,2.6rem);margin-bottom:14px;font-variation-settings:"opsz" 96}
 .sec-head p{color:var(--muted);font-weight:300;line-height:1.7}
 
 /* ============ SERVICES ============ */
-.services-grid{
-  display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));
-  gap:1px;background:var(--line);border:1px solid var(--line);
-  border-radius:16px;overflow:hidden;
+.svc-category{margin-bottom:48px}
+.svc-category:last-child{margin-bottom:0}
+.cat-head{
+  display:flex;align-items:center;gap:14px;margin-bottom:20px;
+  font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--gold-2);font-weight:600;
 }
-.svc{
-  background:var(--white);padding:28px 26px;display:flex;flex-direction:column;gap:12px;
-  transition:background .25s ease;position:relative;min-width:0;
-}
+.cat-head::after{content:'';flex:1;height:1px;background:var(--line)}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.svc{background:var(--white);padding:28px 26px;display:flex;flex-direction:column;gap:12px;transition:background .25s ease;position:relative;min-width:0}
 .svc:hover{background:#FDFBF8}
 .svc-top{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
 .svc h3{font-size:1.22rem;font-weight:600;letter-spacing:-.015em;font-variation-settings:"opsz" 48}
-.svc .price{
-  font-family:'Fraunces',serif;
-  font-size:1.4rem;font-weight:600;color:var(--gold-2);white-space:nowrap;
-  font-variation-settings:"opsz" 60;
-}
+.svc .price{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:600;color:var(--gold-2);white-space:nowrap;font-variation-settings:"opsz" 60}
 .svc p{font-size:.86rem;color:var(--muted);font-weight:300;flex:1;line-height:1.65}
 .svc-meta{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:4px}
 .dur{font-size:.72rem;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);font-weight:500}
@@ -200,199 +142,112 @@ header{
 .svc:hover .btn-sm{opacity:1;transform:translateX(0)}
 
 /* ============ BOOKING ============ */
-.book-wrap{
-  display:grid;
-  grid-template-columns:1.4fr 1fr;
-  gap:22px;
-  align-items:start;
-  max-width:780px;
-  margin:0 auto;
-  width:100%;
-}
+.book-wrap{display:grid;grid-template-columns:1.4fr 1fr;gap:22px;align-items:start;max-width:820px;margin:0 auto;width:100%}
 .book-wrap > *{min-width:0}
-
-.panel{
-  background:var(--white);border:1px solid var(--line);border-radius:14px;
-  padding:22px;box-shadow:var(--shadow);
-  min-width:0;max-width:100%;
-}
+.panel{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:22px;box-shadow:var(--shadow);min-width:0;max-width:100%}
 .field{margin-bottom:14px;min-width:0}
-.field label{
-  display:block;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;
-  color:var(--muted);margin-bottom:7px;font-weight:500;
-}
-.field input,.field select,.field textarea{
-  width:100%;max-width:100%;
-  padding:10px 12px;border:1px solid var(--line);border-radius:9px;
-  background:var(--cream);font-size:.86rem;transition:all .2s;outline:none;font-weight:400;
-  min-width:0;
-}
-.field input:focus,.field select:focus,.field textarea:focus{
-  border-color:var(--gold);background:#fff;box-shadow:0 0 0 3px rgba(176,137,86,.13);
-}
+.field label{display:block;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:7px;font-weight:500}
+.field input,.field select,.field textarea{width:100%;max-width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:9px;background:var(--cream);font-size:.86rem;transition:all .2s;outline:none;font-weight:400;min-width:0}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold);background:#fff;box-shadow:0 0 0 3px rgba(176,137,86,.13)}
 .field textarea{resize:vertical;min-height:64px;font-family:inherit}
 .field-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;min-width:0}
 .field .err{color:var(--red);font-size:.72rem;margin-top:5px;display:none}
 .field.invalid input,.field.invalid select{border-color:var(--red);background:#FEF7F6}
 .field.invalid .err{display:block}
-select{
-  appearance:none;
-  background-image:url("data:image/svg+xml;charset=UTF-8,%3Csvg width='12' height='8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236E655B' stroke-width='1.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-  background-repeat:no-repeat;background-position:right 13px center;padding-right:34px;
-}
-
-.step-label{
-  display:flex;align-items:center;gap:10px;
-  font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;
-  color:var(--muted);font-weight:500;margin:18px 0 10px;
-}
+select{appearance:none;background-image:url("data:image/svg+xml;charset=UTF-8,%3Csvg width='12' height='8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236E655B' stroke-width='1.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 13px center;padding-right:34px}
+.step-label{display:flex;align-items:center;gap:10px;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:500;margin:18px 0 10px}
 .step-label::after{content:'';flex:1;height:1px;background:var(--line)}
 .step-label:first-child{margin-top:0}
-
 .date-strip{display:flex;flex-wrap:wrap;gap:7px;padding-bottom:2px}
-.date-chip{
-  flex:0 0 auto;min-width:58px;padding:8px 6px;border:1px solid var(--line);
-  background:var(--white);border-radius:9px;cursor:pointer;text-align:center;
-  transition:all .18s ease;line-height:1.2;
-}
+.date-chip{flex:0 0 auto;min-width:58px;padding:8px 6px;border:1px solid var(--line);background:var(--white);border-radius:9px;cursor:pointer;text-align:center;transition:all .18s ease;line-height:1.2}
 .date-chip:hover:not(:disabled){border-color:var(--gold);transform:translateY(-2px)}
 .date-chip .dow{display:block;font-size:.6rem;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);font-weight:500}
-.date-chip .dnum{
-  display:block;font-family:'Fraunces',serif;font-size:1.1rem;font-weight:600;margin-top:1px;
-  font-variation-settings:"opsz" 40;
-}
+.date-chip .dnum{display:block;font-family:'Fraunces',serif;font-size:1.1rem;font-weight:600;margin-top:1px;font-variation-settings:"opsz" 40}
 .date-chip .mon{display:block;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 .date-chip.selected{background:var(--ink);border-color:var(--ink)}
 .date-chip.selected .dow,.date-chip.selected .mon{color:rgba(250,247,243,.6)}
 .date-chip.selected .dnum{color:var(--cream)}
 .date-chip:disabled{opacity:.34;cursor:not-allowed;background:var(--sand)}
-
 .slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(62px,1fr));gap:6px;min-width:0}
-.slot{
-  padding:8px 3px;border:1px solid var(--line);background:var(--white);border-radius:8px;
-  font-size:.78rem;cursor:pointer;transition:all .16s ease;font-weight:400;min-width:0;
-}
+.slot{padding:8px 3px;border:1px solid var(--line);background:var(--white);border-radius:8px;font-size:.78rem;cursor:pointer;transition:all .16s ease;font-weight:400;min-width:0}
 .slot:hover:not(:disabled){border-color:var(--gold);color:var(--gold-2)}
 .slot:disabled{background:var(--sand);color:#C3B9AD;cursor:not-allowed;text-decoration:line-through}
 .slot.selected{background:var(--ink);border-color:var(--ink);color:var(--cream);font-weight:500}
-.slots-empty{
-  padding:16px;text-align:center;color:var(--muted);font-size:.82rem;
-  background:var(--sand);border-radius:9px;font-weight:300;
-}
-
-/* summary ticket */
+.slots-empty{padding:16px;text-align:center;color:var(--muted);font-size:.82rem;background:var(--sand);border-radius:9px;font-weight:300}
 .summary{position:sticky;top:96px;min-width:0;max-width:100%}
-.ticket{
-  background:var(--ink);color:var(--cream);
-  border-radius:14px;padding:22px;box-shadow:var(--shadow-lg);
-}
-.ticket h3{
-  font-size:1.2rem;color:var(--cream);margin-bottom:3px;
-  font-variation-settings:"opsz" 60;
-}
-.ticket .sub{
-  font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;
-  color:rgba(250,247,243,.5);margin-bottom:18px;
-}
-.tk-line{
-  display:flex;justify-content:space-between;gap:14px;
-  padding:8px 0;font-size:.82rem;
-  border-bottom:1px solid rgba(250,247,243,.11);
-}
+.ticket{background:var(--ink);color:var(--cream);border-radius:14px;padding:22px;box-shadow:var(--shadow-lg)}
+.ticket h3{font-size:1.2rem;color:var(--cream);margin-bottom:3px;font-variation-settings:"opsz" 60}
+.ticket .sub{font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(250,247,243,.5);margin-bottom:18px}
+.tk-line{display:flex;justify-content:space-between;gap:14px;padding:8px 0;font-size:.82rem;border-bottom:1px solid rgba(250,247,243,.11)}
 .tk-line .k{color:rgba(250,247,243,.55);font-weight:300;flex:0 0 auto}
 .tk-line .v{text-align:right;font-weight:400;min-width:0;word-break:break-word}
 .tk-total{display:flex;justify-content:space-between;align-items:baseline;padding:16px 0 18px}
 .tk-total .k{font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(250,247,243,.55)}
-.tk-total .v{
-  font-family:'Fraunces',serif;font-size:1.7rem;font-weight:600;color:var(--gold);
-  font-variation-settings:"opsz" 72;
-}
-.ticket .btn{
-  background:var(--gold);border-color:var(--gold);color:#fff;width:100%;
-  padding:11px 22px;font-size:.84rem;
-}
+.tk-total .v{font-family:'Fraunces',serif;font-size:1.7rem;font-weight:600;color:var(--gold);font-variation-settings:"opsz" 72}
+.ticket .btn{background:var(--gold);border-color:var(--gold);color:#fff;width:100%;padding:11px 22px;font-size:.84rem}
 .ticket .btn:hover:not(:disabled){background:#fff;border-color:#fff;color:var(--ink)}
 .ticket .btn:disabled{background:rgba(250,247,243,.14);border-color:transparent;color:rgba(250,247,243,.4)}
 .ticket-note{font-size:.7rem;color:rgba(250,247,243,.45);text-align:center;margin-top:11px;font-weight:300;line-height:1.5}
 .ticket.done{background:linear-gradient(150deg,#2F7D5B,#256349)}
 
+/* ============ AMENITIES ============ */
+.amenities{background:var(--sand);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.amenity-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.amenity{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:24px 22px;text-align:center;min-width:0}
+.amenity .icon{font-size:1.6rem;margin-bottom:10px;display:block;line-height:1}
+.amenity h3{font-size:1rem;font-weight:600;margin-bottom:5px;font-variation-settings:"opsz" 48}
+.amenity p{font-size:.82rem;color:var(--muted);font-weight:300;line-height:1.55}
+
+/* ============ ABOUT ============ */
+.about-wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.about-text h2{font-size:clamp(1.85rem,3.6vw,2.6rem);margin-bottom:20px;font-variation-settings:"opsz" 96}
+.about-text p{color:var(--muted);font-weight:300;line-height:1.8;margin-bottom:16px;font-size:.95rem}
+.about-text p:last-child{margin-bottom:0}
+.about-card{background:var(--ink);color:var(--cream);border-radius:16px;padding:36px;box-shadow:var(--shadow-lg)}
+.about-card h3{font-size:1.3rem;color:var(--cream);margin-bottom:6px;font-variation-settings:"opsz" 60}
+.about-card .role{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
+.about-card p{font-size:.88rem;line-height:1.75;color:rgba(250,247,243,.75);font-weight:300;margin-bottom:16px}
+.about-card .quote{font-family:'Fraunces',serif;font-style:italic;font-size:1.05rem;color:var(--cream);line-height:1.6;border-left:2px solid var(--gold);padding-left:18px;margin-top:20px}
+
 /* ============ FOOTER ============ */
 footer{background:var(--ink);color:rgba(250,247,243,.65);padding:68px 0 32px;font-weight:300}
 .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:44px;margin-bottom:48px}
-footer h4{
-  font-size:.72rem;letter-spacing:.17em;text-transform:uppercase;
-  color:rgba(250,247,243,.45);margin-bottom:18px;font-family:'Inter';font-weight:500;
-}
+footer h4{font-size:.72rem;letter-spacing:.17em;text-transform:uppercase;color:rgba(250,247,243,.45);margin-bottom:18px;font-family:'Inter';font-weight:500}
 footer .logo{color:var(--cream);margin-bottom:16px;display:block}
-footer p{font-size:.88rem;line-height:1.8;max-width:320px}
+footer p{font-size:.88rem;line-height:1.8;max-width:340px}
 footer ul{list-style:none;font-size:.88rem;line-height:2.1}
 footer a:hover{color:var(--gold)}
-.foot-bottom{
-  border-top:1px solid rgba(250,247,243,.12);padding-top:24px;
-  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.78rem;
-}
+.foot-bottom{border-top:1px solid rgba(250,247,243,.12);padding-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.78rem}
 
 /* ============ TOAST ============ */
-#toast{
-  position:fixed;bottom:28px;left:50%;transform:translate(-50%,120%);
-  background:var(--ink);color:var(--cream);padding:14px 24px;border-radius:100px;
-  font-size:.87rem;box-shadow:var(--shadow-lg);z-index:300;
-  transition:transform .4s cubic-bezier(.2,.9,.3,1.2);
-  display:flex;align-items:center;gap:11px;max-width:calc(100vw - 40px);
-}
+#toast{position:fixed;bottom:28px;left:50%;transform:translate(-50%,120%);background:var(--ink);color:var(--cream);padding:14px 24px;border-radius:100px;font-size:.87rem;box-shadow:var(--shadow-lg);z-index:300;transition:transform .4s cubic-bezier(.2,.9,.3,1.2);display:flex;align-items:center;gap:11px;max-width:calc(100vw - 40px)}
 #toast.show{transform:translate(-50%,0)}
 #toast .dot{width:7px;height:7px;border-radius:50%;background:var(--gold);flex:0 0 auto}
 #toast.ok .dot{background:#4ED49B}
 #toast.bad .dot{background:#E8776C}
 
-/* ============ TABLET ============ */
+/* ============ RESPONSIVE ============ */
 @media (max-width:980px){
   .book-wrap{grid-template-columns:1fr;gap:20px;max-width:100%}
   .summary{position:static}
+  .about-wrap{grid-template-columns:1fr;gap:32px}
   .foot-grid{grid-template-columns:1fr 1fr;gap:32px}
 }
-
-/* ============ MOBILE ============ */
 @media (max-width:720px){
   body{font-size:15px;line-height:1.6}
   section{scroll-margin-top:64px}
   .container{padding:0 16px}
-
-  /* ---------- HEADER ---------- */
+  .notice{font-size:.72rem;padding:10px 16px}
   .nav{height:56px;gap:12px}
   .logo{font-size:1.18rem}
   .nav .btn-sm{display:none}
   .menu-toggle{display:flex}
-
-  .links{
-    position:absolute;
-    top:100%;left:0;right:0;
-    flex-direction:column;
-    align-items:stretch;
-    gap:0;
-    padding:4px 0;
-    background:var(--cream);
-    border-bottom:1px solid var(--line);
-    box-shadow:0 16px 32px -20px rgba(27,24,21,.28);
-    opacity:0;
-    transform:translateY(-8px);
-    pointer-events:none;
-    transition:opacity .2s ease, transform .25s ease;
-    z-index:101;
-    max-width:100vw;
-  }
+  .links{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;padding:4px 0;background:var(--cream);border-bottom:1px solid var(--line);box-shadow:0 16px 32px -20px rgba(27,24,21,.28);opacity:0;transform:translateY(-8px);pointer-events:none;transition:opacity .2s ease,transform .25s ease;z-index:101;max-width:100vw}
   .links.open{opacity:1;transform:translateY(0);pointer-events:auto}
-  .links a{
-    padding:15px 20px;
-    font-size:1rem;
-    color:var(--ink);
-    border-bottom:1px solid var(--line);
-  }
+  .links a{padding:15px 20px;font-size:1rem;color:var(--ink);border-bottom:1px solid var(--line)}
   .links a:last-child{border-bottom:none}
   .links a::after{display:none}
   .links a:active{background:var(--sand)}
-
-  /* ---------- HERO ---------- */
   .hero{padding:52px 0 60px}
   .hero::before{width:300px;height:300px;right:-130px;top:-100px}
   .hero::after{display:none}
@@ -402,127 +257,80 @@ footer a:hover{color:var(--gold)}
   .lede{font-size:.94rem;margin-bottom:26px;line-height:1.6}
   .hero-actions{flex-direction:column;gap:10px;margin-bottom:32px}
   .hero-actions .btn{width:100%}
-  .hero-facts{
-    display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
-    gap:14px;padding-top:22px;
-  }
+  .hero-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;padding-top:22px}
   .hero-facts li{font-size:.68rem;line-height:1.4}
   .hero-facts strong{font-size:1.35rem;margin-bottom:3px}
-
-  /* ---------- SECTIONS ---------- */
   .sec{padding:56px 0}
   .sec-head{margin-bottom:30px}
   .sec-head h2{font-size:1.7rem;margin-bottom:10px}
   .sec-head p{font-size:.88rem;line-height:1.65}
-
-  /* ---------- SERVICES ---------- */
   .services-grid{grid-template-columns:1fr;border-radius:14px}
   .svc{padding:22px 20px}
   .svc h3{font-size:1.1rem}
   .svc .price{font-size:1.3rem}
   .svc p{font-size:.84rem}
   .svc .btn-sm{opacity:1;transform:none;padding:9px 16px}
-
-  /* ---------- BOOKING ---------- */
+  .svc-category{margin-bottom:36px}
   .book-wrap{max-width:100%;gap:18px}
   .panel{padding:20px 16px;border-radius:14px}
-
   .field{margin-bottom:14px}
   .field-row{grid-template-columns:1fr;gap:14px}
-
-  .field input,.field select,.field textarea{
-    font-size:16px;
-    padding:12px 14px;
-    min-height:46px;
-    border-radius:10px;
-  }
+  .field input,.field select,.field textarea{font-size:16px;padding:12px 14px;min-height:46px;border-radius:10px}
   .field textarea{min-height:80px}
   .field label{font-size:.68rem;margin-bottom:7px}
-
   .step-label{font-size:.68rem;margin:18px 0 10px}
-
-  .date-strip{
-    flex-wrap:nowrap;
-    overflow-x:auto;
-    overflow-y:hidden;
-    gap:8px;
-    padding-bottom:8px;
-    -webkit-overflow-scrolling:touch;
-    scrollbar-width:none;
-    scroll-snap-type:x proximity;
-    max-width:100%;
-  }
+  .date-strip{flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;gap:8px;padding-bottom:8px;-webkit-overflow-scrolling:touch;scrollbar-width:none;scroll-snap-type:x proximity;max-width:100%}
   .date-strip::-webkit-scrollbar{display:none}
-  .date-chip{
-    min-width:58px;
-    padding:9px 6px;
-    min-height:58px;
-    scroll-snap-align:start;
-    flex:0 0 auto;
-  }
+  .date-chip{min-width:58px;padding:9px 6px;min-height:58px;scroll-snap-align:start;flex:0 0 auto}
   .date-chip .dnum{font-size:1.1rem}
-
   .slots{grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
-  .slot{
-    font-size:15px;
-    padding:11px 2px;
-    min-height:46px;
-    border-radius:9px;
-  }
-
-  /* ---------- FOOTER ---------- */
+  .slot{font-size:15px;padding:11px 2px;min-height:46px;border-radius:9px}
+  .amenity-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .amenity{padding:20px 16px}
+  .amenity .icon{font-size:1.4rem}
+  .amenity h3{font-size:.92rem}
+  .amenity p{font-size:.78rem}
+  .about-wrap{gap:24px}
+  .about-card{padding:28px 22px}
+  .about-card h3{font-size:1.2rem}
+  .about-card p{font-size:.85rem}
+  .about-card .quote{font-size:.98rem}
   footer{padding:44px 0 24px}
   .foot-grid{grid-template-columns:1fr;gap:28px;margin-bottom:28px}
   footer .logo{font-size:1.2rem}
   footer p{font-size:.86rem}
   footer ul{font-size:.86rem;line-height:2}
-  .foot-bottom{
-    padding-top:20px;
-    font-size:.72rem;
-    flex-direction:column;
-    align-items:flex-start;
-    gap:6px;
-  }
-
-  /* ---------- TOAST ---------- */
-  #toast{
-    left:16px;right:16px;bottom:16px;
-    transform:translateY(140%);
-    max-width:none;
-    padding:13px 18px;
-    font-size:.82rem;
-    border-radius:14px;
-    justify-content:center;
-  }
+  .foot-bottom{padding-top:20px;font-size:.72rem;flex-direction:column;align-items:flex-start;gap:6px}
+  #toast{left:16px;right:16px;bottom:16px;transform:translateY(140%);max-width:none;padding:13px 18px;font-size:.82rem;border-radius:14px;justify-content:center}
   #toast.show{transform:translateY(0)}
 }
-
-/* ============ VERY SMALL PHONES ============ */
 @media (max-width:380px){
   .container{padding:0 14px}
   .hero h1{font-size:2rem}
   .slots{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .amenity-grid{grid-template-columns:1fr}
 }
-
-/* ============ REDUCED MOTION ============ */
 @media (prefers-reduced-motion: reduce){
-  *,*::before,*::after{
-    animation-duration:.01ms !important;
-    transition-duration:.01ms !important;
-    scroll-behavior:auto !important;
-  }
+  *,*::before,*::after{animation-duration:.01ms !important;transition-duration:.01ms !important;scroll-behavior:auto !important}
 }
 </style>
 </head>
 <body>
 
+<!-- ================= NOTICE BAR ================= -->
+<div class="notice">
+  <strong>Appointments are highly recommended.</strong> Text message confirmation available.
+</div>
+
 <!-- ================= HEADER ================= -->
 <header>
   <div class="container nav">
-    <a href="#" class="logo">Maison <span>Lumière</span></a>
+    <a href="#" class="logo">Elite Styles <span>By MERA</span></a>
     <nav class="links" id="mobileNav" aria-label="Main navigation">
       <a href="#services">Services</a>
       <a href="#book">Book</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </nav>
     <a href="#book" class="btn btn-sm">Book now</a>
     <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileNav">
@@ -534,17 +342,17 @@ footer a:hover{color:var(--gold)}
 <!-- ================= HERO ================= -->
 <section class="hero">
   <div class="container hero-inner">
-    <p class="eyebrow">Est. 2014 · 42 Alder Street</p>
-    <h1>Hair, styled with<br><em>quiet precision.</em></h1>
-    <p class="lede">Cuts, colour and treatments shaped around you — booked in under a minute, with no waiting rooms and no double-bookings.</p>
+    <p class="eyebrow">Spring, TX · Women-Owned</p>
+    <h1>Hair that feels<br><em>like you.</em></h1>
+    <p class="lede">Expert color, precision cuts, and smoothing treatments — crafted by Mera with a personal touch. Conveniently located off Kuykendahl Road inside Blue Lion Salon Studios.</p>
     <div class="hero-actions">
       <a href="#book" class="btn">Book an appointment</a>
       <a href="#services" class="btn btn-ghost">View services</a>
     </div>
     <ul class="hero-facts">
-      <li><strong>3</strong> Resident stylists</li>
-      <li><strong>9</strong> Services on the menu</li>
-      <li><strong>4.9</strong> Average rating</li>
+      <li><strong>5.0</strong> Star rating</li>
+      <li><strong>35+</strong> Happy clients</li>
+      <li><strong>$$</strong> Affordable luxury</li>
     </ul>
   </div>
 </section>
@@ -555,9 +363,10 @@ footer a:hover{color:var(--gold)}
     <div class="sec-head">
       <p class="eyebrow">The Menu</p>
       <h2>Services &amp; pricing</h2>
-      <p>Every appointment includes a consultation, a wash and a finish. Prices are a guide — your stylist will confirm the exact quote before we begin.</p>
+      <p>Every appointment begins with a consultation. Prices are a guide — your stylist will confirm the exact quote before we begin.</p>
     </div>
-    <div class="services-grid" id="servicesGrid"></div>
+
+    <div id="servicesWrap"></div>
   </div>
 </section>
 
@@ -571,7 +380,6 @@ footer a:hover{color:var(--gold)}
     </div>
 
     <div class="book-wrap">
-      <!-- FORM -->
       <form class="panel" id="bookingForm" novalidate>
         <div class="step-label">1 — Your details</div>
         <div class="field-row">
@@ -582,7 +390,7 @@ footer a:hover{color:var(--gold)}
           </div>
           <div class="field" id="f-phone">
             <label for="custPhone">Phone *</label>
-            <input type="tel" id="custPhone" placeholder="(555) 019-2837" autocomplete="tel" inputmode="tel">
+            <input type="tel" id="custPhone" placeholder="(832) 715-0355" autocomplete="tel" inputmode="tel">
             <span class="err">Please enter a contact number.</span>
           </div>
         </div>
@@ -623,7 +431,6 @@ footer a:hover{color:var(--gold)}
         </div>
       </form>
 
-      <!-- SUMMARY -->
       <aside class="summary">
         <div class="ticket" id="ticket">
           <h3>Booking summary</h3>
@@ -642,35 +449,94 @@ footer a:hover{color:var(--gold)}
   </div>
 </section>
 
+<!-- ================= AMENITIES ================= -->
+<section class="sec amenities" id="amenities">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow">Good to know</p>
+      <h2>Amenities &amp; accessibility</h2>
+      <p>We want every visit to feel easy — from parking to payment.</p>
+    </div>
+    <div class="amenity-grid">
+      <div class="amenity">
+        <span class="icon">📶</span>
+        <h3>Free Wi-Fi</h3>
+        <p>Stay connected while you're in the chair.</p>
+      </div>
+      <div class="amenity">
+        <span class="icon">🅿️</span>
+        <h3>On-site Parking</h3>
+        <p>Convenient parking lot right outside the studio.</p>
+      </div>
+      <div class="amenity">
+        <span class="icon">♿</span>
+        <h3>Accessible</h3>
+        <p>Wheelchair accessible entrance, parking, and restroom.</p>
+      </div>
+      <div class="amenity">
+        <span class="icon">💳</span>
+        <h3>Card Payments</h3>
+        <p>All major credit and debit cards accepted.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="sec" id="about">
+  <div class="container">
+    <div class="about-wrap">
+      <div class="about-text">
+        <p class="eyebrow">Meet your stylist</p>
+        <h2>The artist behind the chair</h2>
+        <p>Elite Styles By MERA is a women-owned studio built on positivity, client satisfaction, and a genuine love for transformation. Every appointment is unhurried — a consultation, a plan, and a finish that turns heads.</p>
+        <p>Specializing in custom color, dimensional balayage, and premium keratin treatments, Mera brings years of hands-on expertise to a space designed to feel welcoming, professional, and completely yours.</p>
+        <p>Located inside Blue Lion Salon Studios, just off Kuykendahl Road in Spring, Texas.</p>
+      </div>
+      <div class="about-card">
+        <h3>Mera</h3>
+        <p class="role">Owner &amp; Lead Stylist</p>
+        <p>“Hello beautiful Queens &amp; Kings — my name is Mera. I'm a stylist for children, women, and men. I'm all about positivity and client satisfaction.”</p>
+        <p class="quote">“Always a transformation when I leave.”</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ================= FOOTER ================= -->
-<footer>
+<footer id="contact">
   <div class="container">
     <div class="foot-grid">
       <div>
-        <span class="logo">Maison <span>Lumière</span></span>
-        <p>A small studio on Alder Street, cutting and colouring since 2014. Walk-ins welcome when the diary allows — but booking is kinder to everyone.</p>
+        <span class="logo">Elite Styles <span>By MERA</span></span>
+        <p>A women-owned hair studio in Spring, TX — expert color, precision cuts, and smoothing treatments. Appointments highly recommended; text message confirmation available.</p>
       </div>
       <div>
         <h4>Visit</h4>
         <ul>
-          <li>42 Alder Street</li>
-          <li>Portland, OR 97204</li>
-          <li>(555) 019-2837</li>
-          <li>hello@maisonlumiere.com</li>
+          <li>6603 Spring Stuebner Rd</li>
+          <li>Suite 301</li>
+          <li>Spring, TX 77389</li>
+          <li><a href="tel:+18327150355">+1 832-715-0355</a></li>
+          <li><a href="https://www.facebook.com/elitemera/" target="_blank" rel="noopener">Facebook</a></li>
         </ul>
       </div>
       <div>
         <h4>Hours</h4>
         <ul>
-          <li>Mon – Fri · 9:00 – 18:00</li>
-          <li>Saturday · 9:00 – 16:00</li>
-          <li>Sunday · Closed</li>
+          <li>Mon · 2:00 PM – 8:00 PM</li>
+          <li>Tue · 9:00 AM – 3:00 PM</li>
+          <li>Wed · Closed</li>
+          <li>Thu · 9:00 AM – 3:00 PM</li>
+          <li>Fri · 2:00 PM – 8:00 PM</li>
+          <li>Sat · 10:00 AM – 6:00 PM</li>
+          <li>Sun · Closed</li>
         </ul>
       </div>
     </div>
     <div class="foot-bottom">
-      <span>© <span id="year"></span> Maison Lumière Hair Studio.</span>
-      <span>Bookings are stored locally in your browser.</span>
+      <span>© <span id="year"></span> Elite Styles By MERA. All rights reserved.</span>
+      <span>Inside Blue Lion Salon Studios · Off Kuykendahl Road</span>
     </div>
   </div>
 </footer>
@@ -679,41 +545,79 @@ footer a:hover{color:var(--gold)}
 
 <script>
 /* =========================================================
-   DATA
+   SERVICES — grouped by category
    ========================================================= */
-const SERVICES = [
-  { id:'wcut',    name:"Women's Cut & Style",       dur:60,  price:65,  desc:"Consultation, wash, precision cut and a finish styled to suit your hair's natural texture." },
-  { id:'mcut',    name:"Men's Cut",                 dur:30,  price:35,  desc:"Clipper and scissor work, clean neckline and a quick style-up to finish." },
-  { id:'kcut',    name:"Kids' Cut (under 12)",      dur:30,  price:25,  desc:"A patient, unhurried cut for smaller clients — with a sticker at the end." },
-  { id:'blow',    name:"Blowout & Style",           dur:45,  price:45,  desc:"Wash, rough dry and a smooth or wavy finish that holds for days." },
-  { id:'color',   name:"Full Colour",               dur:120, price:120, desc:"Single-process colour root to tip, including toner and a conditioning rinse." },
-  { id:'balay',   name:"Balayage / Highlights",     dur:150, price:180, desc:"Hand-painted dimension built over foils, finished with a bespoke gloss." },
-  { id:'keratin', name:"Keratin Smoothing",         dur:120, price:200, desc:"Frizz-taming treatment that leaves hair smoother for up to twelve weeks." },
-  { id:'deep',    name:"Deep Conditioning",         dur:30,  price:30,  desc:"A repairing mask under steam — add it to any other service." },
-  { id:'updo',    name:"Bridal / Event Updo",       dur:90,  price:95,  desc:"A trial-informed updo pinned for a long day and a lot of dancing." }
+const SERVICE_CATEGORIES = [
+  {
+    label: 'Haircuts & Styling',
+    services: [
+      { id:'wcut',  name:"Women's Precision Cut",   dur:60,  price:65,  desc:"Consultation, wash, precision cut and a finish styled to suit your hair's natural texture." },
+      { id:'mcut',  name:"Men's Cut",               dur:30,  price:35,  desc:"Clipper and scissor work, clean neckline and a quick style-up to finish." },
+      { id:'kcut',  name:"Kids' Cut (under 12)",    dur:30,  price:25,  desc:"A patient, unhurried cut for smaller clients — with a sticker at the end." },
+      { id:'blow',  name:"Blowout & Style",         dur:45,  price:45,  desc:"Wash, rough dry and a smooth or wavy finish that holds for days." },
+      { id:'updo',  name:"Bridal / Event Updo",     dur:90,  price:95,  desc:"A trial-informed updo pinned for a long day and a lot of dancing." }
+    ]
+  },
+  {
+    label: 'Advanced Color Services',
+    services: [
+      { id:'color',  name:"Custom Hair Color",       dur:120, price:120, desc:"Single-process color root to tip, including toner and a conditioning rinse." },
+      { id:'balay',  name:"Dimensional Balayage",    dur:150, price:180, desc:"Hand-painted dimension built over foils, finished with a bespoke gloss." },
+      { id:'ombre',  name:"Ombré Effects",           dur:150, price:170, desc:"A seamless gradient from deeper roots to lighter ends, customized to your tone." },
+      { id:'high',   name:"High-End Highlights",     dur:120, price:140, desc:"Precision foils for brightness and depth — partial or full head." },
+      { id:'corr',   name:"Color Correction",        dur:180, price:220, desc:"Multi-step correction to fix uneven tone, banding, or unwanted warmth." }
+    ]
+  },
+  {
+    label: 'Texture & Smoothness',
+    services: [
+      { id:'keratin', name:"Premium Keratin Treatment", dur:120, price:200, desc:"Frizz-taming treatment that leaves hair smoother for up to twelve weeks." },
+      { id:'brazil',  name:"Brazilian Blowout",         dur:120, price:190, desc:"A smoothing treatment that reduces frizz and cuts drying time in half." },
+      { id:'deep',    name:"Deep Conditioning",         dur:30,  price:30,  desc:"A repairing mask under steam — add it to any other service." }
+    ]
+  },
+  {
+    label: 'Facial Waxing',
+    services: [
+      { id:'brow',  name:"Brow Wax & Shape",    dur:15, price:15, desc:"Quick, precise brow cleanup and shaping." },
+      { id:'lip',   name:"Lip & Chin Wax",      dur:15, price:12, desc:"Gentle facial hair removal for a smooth finish." },
+      { id:'face',  name:"Full Face Wax",       dur:30, price:35, desc:"Complete facial hair removal including brows, lip, chin, and cheeks." }
+    ]
+  }
 ];
 
+/* Flatten for lookups */
+const ALL_SERVICES = SERVICE_CATEGORIES.flatMap(c => c.services);
+
+/* Single stylist — Mera. Kept as an array so the engine stays flexible. */
 const STYLISTS = [
-  { id:'ava',    name:'Ava Chen',       role:'Senior Stylist' },
-  { id:'marcus', name:'Marcus Reid',    role:'Colour Specialist' },
-  { id:'sofia',  name:'Sofia Alvarez',  role:'Stylist' }
+  { id:'mera', name:'Mera', role:'Owner & Lead Stylist' }
 ];
 
-/* 0 = Sunday. Values are [openMinute, closeMinute]. null = closed. */
+/*
+  HOURS — 0 = Sunday. Values are [openMinute, closeMinute]. null = closed.
+  Mon 2:00 PM – 8:00 PM  → 840 – 1200
+  Tue 9:00 AM – 3:00 PM  → 540 – 900
+  Wed Closed
+  Thu 9:00 AM – 3:00 PM  → 540 – 900
+  Fri 2:00 PM – 8:00 PM  → 840 – 1200
+  Sat 10:00 AM – 6:00 PM → 600 – 1080
+  Sun Closed
+*/
 const HOURS = {
   0: null,
-  1: [540, 1080],
-  2: [540, 1080],
-  3: [540, 1080],
-  4: [540, 1080],
-  5: [540, 1080],
-  6: [540, 960],
+  1: [840, 1200],
+  2: [540, 900],
+  3: null,
+  4: [540, 900],
+  5: [840, 1200],
+  6: [600, 1080],
 };
 
 const STEP = 30;
 const LEAD = 30;
-const DAYS_AHEAD = 21;
-const STORE_KEY = 'maison_lumiere_appointments';
+const DAYS_AHEAD = 28;
+const STORE_KEY = 'elite_styles_mera_appointments';
 
 /* =========================================================
    HELPERS
@@ -795,36 +699,43 @@ function buildSlots(dateStr, service, stylistId){
    BOOKING STATE
    ========================================================= */
 const state = {
-  serviceId: SERVICES[0].id,
-  stylistId: 'any',
+  serviceId: ALL_SERVICES[0].id,
+  stylistId: 'mera',
   date: null,
   time: null,
   assignedStylist: null,
 };
 
-const serviceById  = id => SERVICES.find(s => s.id === id);
-const stylistById  = id => STYLISTS.find(s => s.id === id);
+const serviceById = id => ALL_SERVICES.find(s => s.id === id);
+const stylistById = id => STYLISTS.find(s => s.id === id);
 
 /* =========================================================
    RENDER — SERVICES MENU
    ========================================================= */
 function renderServices(){
-  const grid = $('#servicesGrid');
-  grid.innerHTML = SERVICES.map(s => `
-    <article class="svc">
-      <div class="svc-top">
-        <h3>${s.name}</h3>
-        <span class="price">${money(s.price)}</span>
+  const wrap = $('#servicesWrap');
+  wrap.innerHTML = SERVICE_CATEGORIES.map(cat => `
+    <div class="svc-category">
+      <div class="cat-head">${cat.label}</div>
+      <div class="services-grid">
+        ${cat.services.map(s => `
+          <article class="svc">
+            <div class="svc-top">
+              <h3>${s.name}</h3>
+              <span class="price">${money(s.price)}</span>
+            </div>
+            <p>${s.desc}</p>
+            <div class="svc-meta">
+              <span class="dur">${fmtDuration(s.dur)}</span>
+              <button type="button" class="btn btn-sm" data-book="${s.id}">Book</button>
+            </div>
+          </article>
+        `).join('')}
       </div>
-      <p>${s.desc}</p>
-      <div class="svc-meta">
-        <span class="dur">${fmtDuration(s.dur)}</span>
-        <button type="button" class="btn btn-sm" data-book="${s.id}">Book</button>
-      </div>
-    </article>
+    </div>
   `).join('');
 
-  grid.addEventListener('click', e => {
+  wrap.addEventListener('click', e => {
     const btn = e.target.closest('[data-book]');
     if (!btn) return;
     state.serviceId = btn.dataset.book;
@@ -840,12 +751,14 @@ function renderServices(){
    RENDER — FORM CONTROLS
    ========================================================= */
 function renderSelects(){
-  $('#serviceSelect').innerHTML = SERVICES
-    .map(s => `<option value="${s.id}">${s.name} — ${fmtDuration(s.dur)} — ${money(s.price)}</option>`)
-    .join('');
+  const opts = SERVICE_CATEGORIES.map(cat =>
+    `<optgroup label="${cat.label}">` +
+    cat.services.map(s => `<option value="${s.id}">${s.name} — ${fmtDuration(s.dur)} — ${money(s.price)}</option>`).join('') +
+    `</optgroup>`
+  ).join('');
+  $('#serviceSelect').innerHTML = opts;
 
   $('#stylistSelect').innerHTML =
-    `<option value="any">Any available stylist</option>` +
     STYLISTS.map(s => `<option value="${s.id}">${s.name} · ${s.role}</option>`).join('');
 
   $('#serviceSelect').value = state.serviceId;
@@ -892,7 +805,7 @@ function renderSlots(){
     return;
   }
   if (!slots.length){
-    grid.innerHTML = `<div class="slots-empty">No remaining times for a ${fmtDuration(service.dur)} appointment on this day. Try another date or stylist.</div>`;
+    grid.innerHTML = `<div class="slots-empty">No remaining times for a ${fmtDuration(service.dur)} appointment on this day. Try another date or service.</div>`;
     state.time = null;
     return;
   }
@@ -939,7 +852,7 @@ function validateForm(){
   const phone = $('#custPhone').value.trim();
   const email = $('#custEmail').value.trim();
 
-  const nameBad = name.length < 2;
+  const nameBad  = name.length < 2;
   const phoneBad = phone.replace(/\D/g,'').length < 7;
   const emailBad = email.length > 0 && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
@@ -973,7 +886,7 @@ function confirmBooking(){
     return;
   }
 
-  const ref = 'ML-' + Math.random().toString(36).slice(2,6).toUpperCase() + Date.now().toString().slice(-3);
+  const ref = 'ESM-' + Math.random().toString(36).slice(2,6).toUpperCase() + Date.now().toString().slice(-3);
 
   const appt = {
     id: 'a' + Date.now() + Math.random().toString(36).slice(2,6),
@@ -1008,7 +921,7 @@ function confirmBooking(){
     <div class="tk-line"><span class="k" style="color:rgba(255,255,255,.6)">When</span><span class="v">${fmtDateShort(appt.date)} · ${appt.time}</span></div>
     <div class="tk-line"><span class="k" style="color:rgba(255,255,255,.6)">Total</span><span class="v">${money(appt.price)}</span></div>
     <p style="margin-top:18px;font-size:.84rem;line-height:1.6;color:rgba(255,255,255,.85)">
-      Thanks, ${appt.name.split(' ')[0]} — we've saved your chair. We'll text ${appt.phone} if anything changes.
+      Thanks, ${appt.name.split(' ')[0]} — your chair is saved. Text message confirmation available.
     </p>
     <button type="button" class="btn" id="newBookingBtn" style="margin-top:18px;background:#fff;border-color:#fff;color:var(--ink)">Book another</button>
   `;
@@ -1075,9 +988,7 @@ function wireMobileMenu(){
     toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
   });
 
-  nav.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', closeMenu);
-  });
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
 
   document.addEventListener('click', e => {
     if (!nav.classList.contains('open')) return;
@@ -1085,13 +996,8 @@ function wireMobileMenu(){
     closeMenu();
   });
 
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') closeMenu();
-  });
-
-  window.addEventListener('resize', () => {
-    if (window.innerWidth > 720) closeMenu();
-  });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+  window.addEventListener('resize', () => { if (window.innerWidth > 720) closeMenu(); });
 }
 
 /* =========================================================
@@ -1123,12 +1029,6 @@ function wireEvents(){
 
   $('#serviceSelect').addEventListener('change', e => {
     state.serviceId = e.target.value;
-    state.time = null;
-    renderSlots();
-    renderSummary();
-  });
-  $('#stylistSelect').addEventListener('change', e => {
-    state.stylistId = e.target.value;
     state.time = null;
     renderSlots();
     renderSummary();
