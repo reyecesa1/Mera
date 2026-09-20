@@ -168,8 +168,8 @@ select{appearance:none;background-image:url("data:image/svg+xml;charset=UTF-8,%3
 .date-chip.selected .dow,.date-chip.selected .mon{color:rgba(250,247,243,.6)}
 .date-chip.selected .dnum{color:var(--cream)}
 .date-chip:disabled{opacity:.34;cursor:not-allowed;background:var(--sand)}
-.slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(62px,1fr));gap:6px;min-width:0}
-.slot{padding:8px 3px;border:1px solid var(--line);background:var(--white);border-radius:8px;font-size:.78rem;cursor:pointer;transition:all .16s ease;font-weight:400;min-width:0}
+.slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(88px,1fr));gap:6px;min-width:0}
+.slot{padding:9px 4px;border:1px solid var(--line);background:var(--white);border-radius:8px;font-size:.78rem;cursor:pointer;transition:all .16s ease;font-weight:400;min-width:0;white-space:nowrap}
 .slot:hover:not(:disabled){border-color:var(--gold);color:var(--gold-2)}
 .slot:disabled{background:var(--sand);color:#C3B9AD;cursor:not-allowed;text-decoration:line-through}
 .slot.selected{background:var(--ink);border-color:var(--ink);color:var(--cream);font-weight:500}
@@ -283,8 +283,8 @@ footer a:hover{color:var(--gold)}
   .date-strip::-webkit-scrollbar{display:none}
   .date-chip{min-width:58px;padding:9px 6px;min-height:58px;scroll-snap-align:start;flex:0 0 auto}
   .date-chip .dnum{font-size:1.1rem}
-  .slots{grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
-  .slot{font-size:15px;padding:11px 2px;min-height:46px;border-radius:9px}
+  .slots{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+  .slot{font-size:.82rem;padding:11px 4px;min-height:46px;border-radius:9px}
   .amenity-grid{grid-template-columns:1fr 1fr;gap:12px}
   .amenity{padding:20px 16px}
   .amenity .icon{font-size:1.4rem}
@@ -307,7 +307,7 @@ footer a:hover{color:var(--gold)}
 @media (max-width:380px){
   .container{padding:0 14px}
   .hero h1{font-size:2rem}
-  .slots{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .slots{grid-template-columns:repeat(2,minmax(0,1fr))}
   .amenity-grid{grid-template-columns:1fr}
 }
 @media (prefers-reduced-motion: reduce){
@@ -589,29 +589,18 @@ const SERVICE_CATEGORIES = [
 /* Flatten for lookups */
 const ALL_SERVICES = SERVICE_CATEGORIES.flatMap(c => c.services);
 
-/* Single stylist — Mera. Kept as an array so the engine stays flexible. */
 const STYLISTS = [
   { id:'mera', name:'Mera', role:'Owner & Lead Stylist' }
 ];
 
-/*
-  HOURS — 0 = Sunday. Values are [openMinute, closeMinute]. null = closed.
-  Mon 2:00 PM – 8:00 PM  → 840 – 1200
-  Tue 9:00 AM – 3:00 PM  → 540 – 900
-  Wed Closed
-  Thu 9:00 AM – 3:00 PM  → 540 – 900
-  Fri 2:00 PM – 8:00 PM  → 840 – 1200
-  Sat 10:00 AM – 6:00 PM → 600 – 1080
-  Sun Closed
-*/
 const HOURS = {
   0: null,
-  1: [840, 1200],
-  2: [540, 900],
-  3: null,
-  4: [540, 900],
-  5: [840, 1200],
-  6: [600, 1080],
+  1: [840, 1200],   // Mon 2:00 PM – 8:00 PM
+  2: [540, 900],    // Tue 9:00 AM – 3:00 PM
+  3: null,          // Wed closed
+  4: [540, 900],    // Thu 9:00 AM – 3:00 PM
+  5: [840, 1200],   // Fri 2:00 PM – 8:00 PM
+  6: [600, 1080],   // Sat 10:00 AM – 6:00 PM
 };
 
 const STEP = 30;
@@ -629,8 +618,20 @@ const pad = n => String(n).padStart(2, '0');
 const toDateStr = d => `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
 const parseDate = s => { const [y,m,d] = s.split('-').map(Number); return new Date(y, m-1, d); };
 const toMin  = t => { const [h,m] = t.split(':').map(Number); return h*60 + m; };
+
+/* Internal 24-hour format — used for storage, comparison, and data attributes */
 const toTime = m => `${pad(Math.floor(m/60))}:${pad(m%60)}`;
-const money  = n => '$' + n.toLocaleString();
+
+/* Display 12-hour format with AM/PM — used everywhere the user sees a time */
+function fmtTime12(t){
+  if (!t) return '—';
+  const [h, m] = t.split(':').map(Number);
+  const period = h >= 12 ? 'PM' : 'AM';
+  const hour12 = h % 12 === 0 ? 12 : h % 12;
+  return `${hour12}:${pad(m)} ${period}`;
+}
+
+const money = n => '$' + n.toLocaleString();
 
 function fmtDuration(min){
   if (min < 60) return min + ' min';
@@ -814,7 +815,7 @@ function renderSlots(){
     <button type="button" class="slot${state.time === s.time ? ' selected' : ''}"
             data-time="${s.time}"
             data-stylist="${s.stylist || ''}"
-            ${s.available ? '' : 'disabled'}>${s.time}</button>
+            ${s.available ? '' : 'disabled'}>${fmtTime12(s.time)}</button>
   `).join('');
 }
 
@@ -830,7 +831,7 @@ function renderSummary(){
   $('#sumService').textContent = service.name;
   $('#sumStylist').textContent = stylistLabel;
   $('#sumDate').textContent    = state.date ? fmtDateShort(state.date) : '—';
-  $('#sumTime').textContent    = state.time || '—';
+  $('#sumTime').textContent    = state.time ? fmtTime12(state.time) : '—';
   $('#sumDur').textContent     = fmtDuration(service.dur);
   $('#sumPrice').textContent   = money(service.price);
 
@@ -918,7 +919,7 @@ function confirmBooking(){
     <p class="sub" style="color:rgba(255,255,255,.6)">Reference ${ref}</p>
     <div class="tk-line"><span class="k" style="color:rgba(255,255,255,.6)">Service</span><span class="v">${service.name}</span></div>
     <div class="tk-line"><span class="k" style="color:rgba(255,255,255,.6)">Stylist</span><span class="v">${appt.stylistName}</span></div>
-    <div class="tk-line"><span class="k" style="color:rgba(255,255,255,.6)">When</span><span class="v">${fmtDateShort(appt.date)} · ${appt.time}</span></div>
+    <div class="tk-line"><span class="k" style="color:rgba(255,255,255,.6)">When</span><span class="v">${fmtDateShort(appt.date)} · ${fmtTime12(appt.time)}</span></div>
     <div class="tk-line"><span class="k" style="color:rgba(255,255,255,.6)">Total</span><span class="v">${money(appt.price)}</span></div>
     <p style="margin-top:18px;font-size:.84rem;line-height:1.6;color:rgba(255,255,255,.85)">
       Thanks, ${appt.name.split(' ')[0]} — your chair is saved. Text message confirmation available.
